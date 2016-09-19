@@ -24,7 +24,7 @@ public static final String GET_ALL_USERS_QUERY = "select * from users";
 
 User user = SQL(url).sql(GET_USER_QUERY)
 					.parameter("1001")
-					.("anca01")
+					.parameter("anca01")
 					.single(USER_RESULT_MAPPER);
 
 List<User> users = SQL(url).sql(GET_ALL_USERS_QUERY)
