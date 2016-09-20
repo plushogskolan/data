@@ -21,6 +21,11 @@ public final class User {
 	}
 
 	@Override
+	public String toString() {
+		return id + ", " + username;
+	}
+	
+	@Override
 	public boolean equals(Object other) {
 		if (other instanceof User) {
 			User otherUser = (User) other;

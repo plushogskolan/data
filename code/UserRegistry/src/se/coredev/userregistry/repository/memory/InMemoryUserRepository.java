@@ -5,12 +5,13 @@ import java.util.Map;
 
 import se.coredev.userregistry.model.User;
 import se.coredev.userregistry.repository.RepositoryException;
+import se.coredev.userregistry.repository.RepositoryListener;
 import se.coredev.userregistry.repository.UserRepository;
 
 public final class InMemoryUserRepository implements UserRepository {
 
 	private final Map<String, User> users;
-
+	
 	public InMemoryUserRepository() {
 		users = new HashMap<>();
 	}
@@ -33,6 +34,12 @@ public final class InMemoryUserRepository implements UserRepository {
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public UserRepository addListener(RepositoryListener listener) {
+		// TODO: implement me!
+		return null;
 	}
 
 }

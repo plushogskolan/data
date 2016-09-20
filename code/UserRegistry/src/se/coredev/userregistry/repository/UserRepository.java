@@ -10,4 +10,6 @@ public interface UserRepository {
 	
 	boolean exists(User user) throws RepositoryException; 
 	
+	UserRepository addListener(RepositoryListener listener); 
+	
 }
